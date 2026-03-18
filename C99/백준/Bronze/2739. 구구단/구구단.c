@@ -2,13 +2,15 @@
 
 int main(void){
 
-    int N;
+    int N, i = 1;
     scanf("%d", &N);
 
-    for (int i = 1; i < 10; i++)
+    while (i <= 9)
     {
         printf("%d * %d = %d\n", N, i, N*i);
+        i++;
     }
+    
     
     return 0;
 }
