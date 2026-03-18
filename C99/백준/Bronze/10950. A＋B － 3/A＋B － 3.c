@@ -2,13 +2,15 @@
 
 int main(void){
     int A, B, Test;
+    int i = 0;
 
     scanf("%d", &Test);
     
-    for (int i = 0; i < Test; i++)
+    while (i < Test)
     {
         scanf("%d %d", &A, &B);
         printf("%d\n", A+B);
+        i++;
     }
     
 
