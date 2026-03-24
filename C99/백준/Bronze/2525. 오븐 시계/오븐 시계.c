@@ -1,25 +1,20 @@
-#include <stdio.h>
+ #include <stdio.h>
 
 int main(void){
-    int hour, minute, tSet;
 
-    scanf("%d %d\n%d", &hour, &minute, &tSet);
+    int H,M,Time,ovenH,ovenM;
 
-    int endH = 0, endM = 0;
+    scanf("%d %d", &H, &M);
+    scanf("%d", &Time);
 
-    if(minute + tSet < 60){
-        endH = hour;
-        endM = minute + tSet;
-    } else{
-        endH = hour + (minute + tSet)/60;
-        endM = (minute + tSet)%60;
+    ovenH = H + (M + Time)/60;
+    ovenM = (M + Time)%60;
+
+    if (ovenH >= 24){
+        ovenH = ovenH % 24;
     }
 
-    if (endH >= 24){
-        endH = endH - 24;
-    }
-    
-    printf("%d %d", endH, endM);
+    printf("%d %d", ovenH, ovenM);
 
     return 0;
 }
