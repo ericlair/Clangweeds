@@ -5,9 +5,11 @@ int main(void){
 
     scanf("%d", &T);
     
-    for (int i = 0; i < T; i++){
+    int i = 0;
+    while (i < T){
         scanf("%d %d", &A, &B);
         printf("Case #%d: %d\n", i+1, A+B);
+        i++;
     }
 
     return 0;
